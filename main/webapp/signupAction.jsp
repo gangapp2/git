@@ -28,7 +28,7 @@
 			UserDAO userDAO = new UserDAO();
 			
 			// 유저 테이블이 없다면 테이블을 생성합니다.
-			userDAO.createTableIfNotExist();
+			userDAO.createUserTableIfNotExist();
 			
 			// -1 제외값이 반환되면 회원정보 추가후 로그인창으로 <-> -1반환하면 아이디존재 경고메세지출력
 		    int result = userDAO.signup(user);

@@ -83,7 +83,7 @@ public class UserDAO {
 	        pstmt.setString(2, user.getUserName());
 	        pstmt.setString(3, user.getPhoneNum());
 	        pstmt.setString(4, user.getBirthDate());
-	        pstmt.setString(5,userID);
+	        pstmt.setString(5,userID); // 현재 ID값
 	        
 	        // executeUpdate는 영향을 받은 행의 수를 반환합니다
 	        int rowsAffected = pstmt.executeUpdate();
@@ -140,7 +140,7 @@ public class UserDAO {
 	}
 	
 	// 테이블을 생성합니다.
-    public void createTableIfNotExist() {
+    public void createUserTableIfNotExist() {
     	try {
             // 유저 테이블이 없는 경우에만 생성합니다.
             if (!isTableExists("user")) {
